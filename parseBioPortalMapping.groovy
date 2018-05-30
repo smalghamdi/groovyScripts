@@ -1,5 +1,5 @@
 // this code parse the ontology mappings provided by BioPortal
-// pass your api key as an argument
+// pass your api key as an argument (get an api key from http://bioportal.bioontology.org/accounts/new) 
 
 import groovy.json.JsonSlurper
 
