@@ -1,3 +1,7 @@
+// use this code to get equivalent classes in one ontologies that have spacific ids
+// run this by passing 3 arguments 
+// groovy getEquivalent.groovy ontology_path class_prefix1 class_prefix2
+
 @Grapes([
 @Grab(group='org.slf4j', module='slf4j-simple', version='1.6.1'),
 @Grab(group='org.semanticweb.elk', module='elk-owlapi', version='0.4.3'),
