@@ -43,7 +43,7 @@ for (int i = 1; i < args.length; i++) {
      onts << manager.loadOntologyFromOntologyDocument(new File(args[i]))
 }
 
-def mperged = IRI.create("http://phenomebrowser.net/")
+def mperged = IRI.create("http://ontology_url/")
 
 OWLOntology mergedOnt = manager.createOntology(mperged,onts)
 
