@@ -1,3 +1,8 @@
+
+// use this code to merge 2 or more ontologies
+// run this by passing at least 2 arguments 
+// groovy mergeOntologies.groovy firstOntologyPath secondOntologyPath [thirdOntologyPath ... ]
+
 @Grapes([
 @Grab(group='org.slf4j', module='slf4j-simple', version='1.6.1'),
 @Grab(group='net.sourceforge.owlapi', module='owlapi-api', version='4.2.5'),
