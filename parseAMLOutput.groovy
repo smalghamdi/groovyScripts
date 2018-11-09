@@ -1,4 +1,4 @@
-// use this code to parse the output of AgreementMaker light(AML) into tab seperated table
+// use this code to parse the output of AgreementMaker light(AML) in tab seperated table
 // to run:
 // groovy parseAMLOutput.groovy file_path
 
