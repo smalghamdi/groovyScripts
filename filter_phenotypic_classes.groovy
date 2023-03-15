@@ -39,24 +39,22 @@ input_Ontology = manager.loadOntologyFromOntologyDocument(IRI.create("http://pur
 OWLReasoner reasoner = f.createReasoner(input_Ontology,config)
 def o_class = fac.getOWLClass(IRI.create("http://purl.obolibrary.org/obo/HP_0000118"))
 
-input_Ontology.getAxioms(class_).each{ax ->
+input_Ontology.getAxioms(o_class).each{ax ->
     manager.addAxiom(outont, ax)
 }
-EntitySearcher.getAnnotationAssertionAxioms(class_, input_Ontology).each { ax ->
+EntitySearcher.getAnnotationAssertionAxioms(o_class, input_Ontology).each { ax ->
 	manager.addAxiom(outont, ax)
 }
 
 
 classes = reasoner.getSubClasses(o_class, false).getFlattened()
 
-//classes = ["http://purl.obolibrary.org/obo/FBcv_0000347","http://purl.obolibrary.org/obo/FBcv_0000346"]
 
 classes.each{ cl ->
-		//class_ = fac.getOWLClass(IRI.create(cl))
         input_Ontology.getAxioms(cl).each{ax ->
             manager.addAxiom(outont, ax)
         }
-        EntitySearcher.getAnnotationAssertionAxioms(class_, input_Ontology).each { ax ->
+        EntitySearcher.getAnnotationAssertionAxioms(cl, input_Ontology).each { ax ->
    			manager.addAxiom(outont, ax)
   		}
     
