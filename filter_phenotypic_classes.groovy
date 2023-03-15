@@ -36,7 +36,7 @@ ElkReasonerFactory f = new ElkReasonerFactory()
 
 input_Ontology = manager.loadOntologyFromOntologyDocument(IRI.create("http://purl.obolibrary.org/obo/hp.owl"))
 
-OWLReasoner reasoner = f.createReasoner(ont,config)
+OWLReasoner reasoner = f.createReasoner(input_Ontology,config)
 def o_class = fac.getOWLClass(IRI.create("http://purl.obolibrary.org/obo/HP_0000118"))
 
 input_Ontology.getAxioms(class_).each{ax ->
